@@ -5,24 +5,26 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install packages.
 RUN apt-get update
-RUN apt-get install -y \
-	vim \
-	git \
+RUN apt-get \
 	apache2 \
-	php5-cli \
-	php5-mysql \
-	php5-gd \
-	php5-curl \
-	php5-xdebug \
-	libapache2-mod-php5 \
 	curl \
-	mysql-server \
+	git \
+	install -y \
+	libapache2-mod-php5 \
 	mysql-client \
+	mysql-server \
 	openssh-server \
+	php5-cli \
+	php5-curl \
+	php5-gd \
+	php5-mysql \
+	php5-xdebug \
 	phpmyadmin \
-	wget \
+	supervisor \
 	unzip \
-	supervisor
+	vim \
+	wget
+
 RUN apt-get clean
 
 # Install Composer.
