@@ -5,11 +5,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install packages.
 RUN apt-get update
-RUN apt-get \
+RUN apt-get install -y \
 	apache2 \
 	curl \
 	git \
-	install -y \
 	libapache2-mod-php5 \
 	mysql-client \
 	mysql-server \
